@@ -6,6 +6,7 @@ import lombok.Data;
 import java.lang.reflect.Method;
 
 /**
+ * 代表 server 的一个实例
  * 表示一个具体服务
  * */
 @Data

@@ -53,10 +53,10 @@ public class HttpTransportServeer implements TransportServer{
 
     class RequestServlet extends HttpServlet {
         @Override
-        protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        protected void doPost(HttpServletRequest request, HttpServletResponse resp) throws ServletException, IOException {
             log.info("client connect");
 
-            InputStream in = req.getInputStream();
+            InputStream in = request.getInputStream();
             OutputStream out = resp.getOutputStream();
 
             if(handler != null) {

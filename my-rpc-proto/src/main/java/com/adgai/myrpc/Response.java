@@ -10,7 +10,7 @@ public class Response {
     /**
      * 服务返回编码，0-成功， 非 0 失败
      * */
-    private int code;
+    private int code = 0;
     /**
      * 具体的错误信息，默认成功
      * */

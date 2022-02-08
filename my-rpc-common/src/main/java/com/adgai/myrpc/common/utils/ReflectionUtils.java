@@ -33,11 +33,11 @@ public class ReflectionUtils {
     public static Method[] getPublicMethods(Class clazz) {
         // getDeclaredMethods(): 返回当前类所有的方法，不包含父类的方法，同时包含 private和 protected 的方法
         Method[] methods = clazz.getDeclaredMethods();
-        List<Method> pmethods = new ArrayList<>();
+        List<Method> pmethods = new ArrayList<Method>();
         // 把 public 的方法过滤出来
-        for(Method m : methods) {
-            if(Modifier.isPublic(m.getModifiers())) {
-                pmethods.add(m);
+        for(Method method : methods) {
+            if(Modifier.isPublic(method.getModifiers())) {
+                pmethods.add(method);
             }
         }
         return pmethods.toArray(new Method[0]);

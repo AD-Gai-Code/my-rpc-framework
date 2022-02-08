@@ -10,8 +10,9 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
+ * 作为 service 的管理类
  * 管理 rpc 暴露的服务
- * */
+ */
 @Slf4j
 public class ServiceManager {
     private Map<ServiceDescriptor, ServiceInstance> services;
@@ -20,9 +21,10 @@ public class ServiceManager {
         this.services = new ConcurrentHashMap<>();
     }
 
+    // 注册服务
     public <T> void register(Class<T> interfaceClass, T bean) {
         Method[] methods = ReflectionUtils.getPublicMethods(interfaceClass);
-        for(Method method : methods) {
+        for (Method method : methods) {
             ServiceInstance sis = new ServiceInstance(bean, method);
             ServiceDescriptor sdp = ServiceDescriptor.from(interfaceClass, method);
 
@@ -31,6 +33,7 @@ public class ServiceManager {
         }
     }
 
+    // 查找服务
     public ServiceInstance lookup(Request request) {
         ServiceDescriptor sdp = request.getService();
         return services.get(sdp);
