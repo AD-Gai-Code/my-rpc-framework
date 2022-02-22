@@ -9,11 +9,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="my-rpc-common" />
         <module name="my-rpc-example" />
+        <module name="rpc-common" />
         <module name="my-rpc-server" />
+        <module name="test-server" />
         <module name="my-rpc-codec" />
+        <module name="test-client" />
         <module name="my-rpc-proto" />
         <module name="my-rpc-transport" />
+        <module name="rpc-api" />
         <module name="my-rpc-client" />
+        <module name="rpc-core" />
       </profile>
     </annotationProcessing>
   </component>
