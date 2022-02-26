@@ -4,7 +4,8 @@ import com.adgai.myrpc.enumeration.RpcError;
 
 /**
  * RPC调用异常
- * @author ziyang
+ *
+ * @author adgai
  */
 public class RpcException extends RuntimeException {
 

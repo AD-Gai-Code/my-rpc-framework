@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>My-RPC-Framework</artifactId>
-        <groupId>top.guoziyang</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <groupId>com.adgai</groupId>
+        <version>2.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -13,14 +13,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>top.guoziyang</groupId>
+            <groupId>com.adgai</groupId>
             <artifactId>rpc-core</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>top.guoziyang</groupId>
+            <groupId>com.adgai</groupId>
             <artifactId>rpc-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

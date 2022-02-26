@@ -6,7 +6,7 @@ import com.adgai.myrpc.api.HelloObject;
 import com.adgai.myrpc.api.HelloService;
 
 /**
- * @author ziyang
+ * @author adgai
  */
 public class HelloServiceImpl implements HelloService {
 
