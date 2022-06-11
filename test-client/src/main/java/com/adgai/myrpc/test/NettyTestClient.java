@@ -1,10 +1,10 @@
 package com.adgai.myrpc.test;
 
-import com.adgai.myrpc.RpcClient;
-import com.adgai.myrpc.RpcClientProxy;
+import com.adgai.myrpc.transport.RpcClient;
+import com.adgai.myrpc.transport.RpcClientProxy;
 import com.adgai.myrpc.api.HelloObject;
 import com.adgai.myrpc.api.HelloService;
-import com.adgai.myrpc.netty.client.NettyClient;
+import com.adgai.myrpc.transport.netty.client.NettyClient;
 import com.adgai.myrpc.serializer.HessianSerializer;
 
 /**

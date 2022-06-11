@@ -1,10 +1,10 @@
 package com.adgai.myrpc.test;
 
-import com.adgai.myrpc.RpcClientProxy;
+import com.adgai.myrpc.transport.RpcClientProxy;
 import com.adgai.myrpc.api.HelloObject;
 import com.adgai.myrpc.api.HelloService;
 import com.adgai.myrpc.serializer.KryoSerializer;
-import com.adgai.myrpc.socket.client.SocketClient;
+import com.adgai.myrpc.transport.socket.client.SocketClient;
 
 /**
  * 测试用消费者（客户端）
