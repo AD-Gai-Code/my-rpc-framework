@@ -1,5 +1,7 @@
 package com.adgai.myrpc.test;
 
+import com.adgai.myrpc.api.ByeService;
+import com.adgai.myrpc.serializer.CommonSerializer;
 import com.adgai.myrpc.transport.RpcClientProxy;
 import com.adgai.myrpc.api.HelloObject;
 import com.adgai.myrpc.api.HelloService;
@@ -14,13 +16,14 @@ import com.adgai.myrpc.transport.socket.client.SocketClient;
 public class SocketTestClient {
 
     public static void main(String[] args) {
-        SocketClient client = new SocketClient("127.0.0.1", 9999);
-        client.setSerializer(new KryoSerializer());
+        SocketClient client = new SocketClient(CommonSerializer.KRYO_SERIALIZER);
         RpcClientProxy proxy = new RpcClientProxy(client);
         HelloService helloService = proxy.getProxy(HelloService.class);
         HelloObject object = new HelloObject(12, "This is a message");
         String res = helloService.hello(object);
         System.out.println(res);
+        ByeService byeService = proxy.getProxy(ByeService.class);
+        System.out.println(byeService.bye("Netty"));
     }
 
 }
